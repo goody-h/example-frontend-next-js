@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: goodyhexamplefrontendnextjs 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: goodyhexamplefrontendnextjs 
+    spec:
+      containers:
+        - name: goodyhexamplefrontendnextjs 
+          image: mycontainerregistryhope1.azurecr.io/goodyhexamplefrontendnextjs
+          ports:
+          - containerPort: 8081
